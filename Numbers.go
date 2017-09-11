@@ -35,6 +35,19 @@ func ConvertToUint(s string) (uint, error) {
 
 }
 
+func ConvertToUint64(s string) (uint64, error) {
+
+	cs, err := strconv.ParseUint(s, 10, 64)
+
+	if err != nil {
+		return 0, err
+
+	}
+
+	return uint64(cs), nil
+
+}
+
 func FormatToArrayStringSQLQuery(array []uint) (sqlArray string) {
 	buffer := bytes.NewBufferString("")
 
