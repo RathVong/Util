@@ -1,11 +1,11 @@
 package util
 
 import (
-	"strconv"
 	"bytes"
 	"fmt"
-	"math"
 	"log"
+	"math"
+	"strconv"
 )
 
 func UniqueUint(input []uint) []uint {
@@ -34,8 +34,6 @@ func ConvertToUint(s string) (uint, error) {
 	return uint(cs), nil
 
 }
-
-
 
 func ConvertToUint64(s string) (uint64, error) {
 
@@ -115,8 +113,18 @@ func ConvertPageParamsToInt(s string) int {
 	log.Println("convertStringToInt()")
 	log.Println(err)
 
-	defer func() { if c == 0 {c = 1} }()
+	defer func() {
+		if c == 0 {
+			c = 1
+		}
+	}()
 	return 1
 
 }
 
+func min(a, b int64) int64 {
+	if a <= b {
+		return a
+	}
+	return b
+}
