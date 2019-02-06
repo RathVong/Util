@@ -122,7 +122,7 @@ func ConvertPageParamsToInt(s string) int {
 
 }
 
-func min(a, b int64) int64 {
+func Min(a, b int64) int64 {
 	if a <= b {
 		return a
 	}
